@@ -39,7 +39,7 @@ jobs:
         with:
           payload: |
             {
-              "text": "Name: Nicolette Lee\nMatriculation: ${{ secrets.MATRICULATION }}\nEmail: ${{ secrets.EMAIL }}\nRepo: git://github.com:niclkw/randnum.git \nImage Name: kixco/randnum:${{ github.event.release.tag_name }}\nImage Url: https://hub.docker.com/repository/docker/kixco/randnum \n"
+              "text": "Name: ${{ secrets.MYNAME }}\nMatriculation: ${{ secrets.MATRICULATION }}\nEmail: ${{ secrets.EMAIL }}\nRepo: ${{ secrets.REPO }} \nImage Name: ${{ secrets.IMAGENAME }}:${{ github.event.release.tag_name }}\nImage Url: ${{ secrets.IMAGEURL }} \n"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
